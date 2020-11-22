@@ -1,0 +1,47 @@
+<!doctype html>
+
+<html>
+	<head>
+		<title>Promising Places Datagenerator</title>
+		<link href="css/bittsreset.css" rel="stylesheet" type="text/css">
+		<!--reset-->
+		<link href="css/style.css" rel="stylesheet" type="text/css">
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1"/>
+		<script src="js/madlibs.js"></script>
+		<script src="js/placesgenerator.js"></script>
+	</head>
+	
+	<body>
+		<header>
+			<div class="cwidth">
+				<h1>Generate Data for Promising Places</h1>
+			</div>
+		</header>
+		<main>
+			<p>This data generator will only generate base entities. It will not generate relationships between entities. You must augment the codebase for it to work in your own database.</p>
+			
+			<section>
+				<select id="datapicker">
+					<option value="landlords">Landlords</option>
+					<option value="tenants">Tenants</option>
+					<option value="leases">Leases</option>
+					<option value="properties">Properties</option>
+					<option value="payments">Payments</option>
+				</select>
+				<input type="text" id="scale"/>
+				<button onclick="generatedata();">Generate</button>
+				
+			</section>
+			<textarea id="output" style="width:100%; overflow:scroll;">
+			
+			</textarea>
+		</main>
+		<footer>
+			<div class="cwidth">
+				&copy; Bitts Development
+			</div>
+		</footer>
+	</body>
+	
+</html>
